@@ -5,7 +5,9 @@
 #include <string>
 #include <sstream>
 #include <thread>
-
+#pragma GCC target("avx2")
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
 /* 
 g++ -Ofast -mtune=native -march=native main.cpp -pthread
 */
