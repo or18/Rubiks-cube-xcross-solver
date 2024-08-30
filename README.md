@@ -17,7 +17,7 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 ```
 ## compile and run
 ```sh
-!g++ -Ofast -mtune=native -march=native test.cpp -pthread
+!g++ -Ofast -mtune=native -march=native main.cpp -pthread
 !./a.out
 ```
 
