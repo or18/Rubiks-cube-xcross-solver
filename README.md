@@ -24,8 +24,8 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 # Performance
 ## Compiled and executed on Google colab by the command
 ```sh
-# !apt-get install time (to use /usr/bin/time)
-!g++ -Ofast -mtune=native -march=native test.cpp -pthread
+!apt-get install time (to use /usr/bin/time command)
+!g++ -Ofast -mtune=native -march=native main.cpp -pthread
 !/usr/bin/time -v ./a.out
 ```
 ## cross
