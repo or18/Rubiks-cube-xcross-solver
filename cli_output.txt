@@ -1,0 +1,179 @@
+$ g++ -Ofast -mtune=native -march=native cli.cpp -pthread
+> ./a.exe
+Available command:
+  exit - terminate cli
+  help - show help
+  ex - change the option to show input example
+
+  f - show current F2L solver setting
+  f sol - solve F2L with current setting
+  f scr - change scramble
+  f rot - change rotation
+  f op - change F2L option
+  f len - change max solution length
+  f num - change max solution number
+  f face - change face restrict
+
+  ls - show current LL substeps solver setting
+  ls sol - solve last layer substeps with current setting
+  ls scr - change scramble
+  ls rot - change rotation
+  ls op - change last layer option
+  ls len - change max solution length
+  ls num - change max solution number
+  ls face - change face restrict
+
+  l - show current LL solver setting
+  l sol - solve last layer with current setting
+  l scr - change scramble
+  l rot - change rotation
+  l len - change max solution length
+  l num - change max solution number
+  l face - change face restrict
+
+  lu - show current LL & AUF solver setting
+  lu sol - solve last layer and AUF with current setting
+  lu scr - change scramble
+  lu rot - change rotation
+  lu len  - change max solution length
+  lu num - change max solution number
+  lu face - change face restrict
+
+  To show this help again, please use help command
+
+> f scr
+example input: U U' U2 D D2 D' L L2 L' R R2 R' F F2 F' B B2 B'
+scramble: R' U F R' B2 R2 U L' F2 R2 B2 R2 D2 R2 U' B2 U2 F2 L2 B'
+> f num
+example input: 100
+max solution number: 10
+> f sol
+1: U2 B' D L' R2 F'
+2: U2 B' D L' F' R2
+3: U' F2 B' D L' F'
+4: B2 U' L' F2 B D
+5: B2 U' F2 L' B D
+6: B' U2 D L' R2 F'
+7: B' U2 D L' F' R2
+8: B' U' F2 D L' F'
+9: U D2 R F B2 D' L
+10: U D2 F R B2 D' L
+> f op
+example input: BL BR FR FL
+option: BL FL
+> f rot
+example input: x x2 x' y y2 y' z z2 z'
+rotation: z2 y'
+> f
+  scramble: R' U F R' B2 R2 U L' F2 R2 B2 R2 D2 R2 U' B2 U2 F2 L2 B'
+  rotation: z2 y'
+  slot option: BL FL
+  max solution length: 16
+  max solution number: 10
+  face restrict: UDLRFB
+> f sol
+1: z2 y' U L' F2 U D L2 F' R F2 R' D'
+2: z2 y' U F2 U2 B2 L2 F' U' L' F' U L
+3: z2 y' D R2 F' D2 B L' B R2 D' R D2
+4: z2 y' D2 R' B D2 L' U B' U2 L2 U' F2
+5: z2 y' L2 F2 L' B R' U2 L' F2 D R B2
+6: z2 y' L2 B2 R' B2 U' B2 D2 F' L R F'
+7: z2 y' L2 B2 R' B2 U' B2 D2 F' L F' R
+8: z2 y' L2 B' R' B2 U L' B2 D2 F L F
+9: z2 y' L2 B' R' B2 U B2 D2 F L F R
+10: z2 y' L' U F2 U D L2 F' R F2 R' D'
+> ls scr
+example input: U U' U2 D D2 D' L L2 L' R R2 R' F F2 F' B B2 B'
+scramble: R B2 R2 B2 U2 R B2 R' U2 R' U2 R' F' D L' D' B2 F R'
+> ls face
+example input: UDLRFB
+restrict: UDRF
+> ls sol
+already solved
+> ls op
+example input: CP CO EO EP
+option: CO EO
+> ls
+  scramble: R B2 R2 B2 U2 R B2 R' U2 R' U2 R' F' D L' D' B2 F R'
+  rotation:
+  slot option: CO EO
+  max solution length: 16
+  max solution number: 20
+  face restrict: UDRF
+> ls sol
+1: F R' U' R2 U' R2 U2 R U' F'
+2: R2 U' R F R' U R2 U' R' F' R
+3: R' F R F' R U2 R' U' F' U' F
+4: F R' U' R2 U' R2 U2 R U' F' U
+5: F R' U' R2 U' R2 U2 R U' F' U2
+6: F R' U' R2 U' R2 U2 R U' F' U'
+7: F R' D' F2 U' F2 U D R U' F'
+8: U' R' U2 R2 U R' U' R' U2 F R F'
+9: U' R' U' F' U2 F U F' U2 F U R
+10: U' R' F R' F2 U F U F' U' F R2
+11: D F R' U' R2 U' R2 U2 R U' F' D'
+12: D2 F R' U' R2 U' R2 U2 R U' F' D2
+13: D' F R' U' R2 U' R2 U2 R U' F' D
+14: R2 U' R F R' U R2 U' R' F' R U
+15: R2 U' R F R' U R2 U' R' F' R U2
+16: R2 U' R F R' U R2 U' R' F' R U'
+17: R' F R F' U R U R' U F' U F
+18: R' F R F' R U2 R' U' F' U' F U
+19: R' F R F' R U2 R' U' F' U' F U2
+20: R' F R F' R U2 R' U' F' U' F U'
+> l scr
+example input: U U' U2 D D2 D' L L2 L' R R2 R' F F2 F' B B2 B'
+scramble: L2 F2 D' B2 D B2 U' B2 U B2 F2 L2
+> ex
+Y/n:
+n
+> l face
+restrict: URF
+> l sol
+1: U R2 U2 R2 F2 U' R2 U R2 U F2 U2 R2 U' R2
+2: U2 R2 U2 F2 U' F2 U' F2 R2 U F2 U2 R2 U' F2
+3: U2 R2 F2 U' R2 U' R2 U F' U F' R2 F U' F'
+4: U' F2 R2 U' F2 R' U' R F2 R' U R U R2 F2
+5: R U R' F R2 F' R' U' R' F' U2 F R' U R
+6: R2 F2 R U2 R U2 R' F R U R' U' R' F R2
+7: R2 F2 R U2 R F U2 R U R' F' R' U' F2 R
+8: F R U R' F R2 F' R' U' R' F' U2 R' U R
+9: U R U F R' U R2 U' R' F' U' R' U2 F' U F
+10: U R2 U2 R2 U' R2 U R2 U F2 U2 R2 U' R2 U' F2
+11: U R2 U2 R2 F2 U' R2 U R2 U F2 U2 R2 U' R2 U
+12: U R2 U2 R2 F2 U' R2 U R2 U F2 U2 R2 U' R2 U2
+13: U R2 U2 R2 F2 U' R2 U R2 U F2 U2 R2 U' R2 U'
+14: U F2 U2 F2 U F2 U F2 U2 R2 U2 R2 U' R2 U' R2
+15: U2 R2 U2 F2 U' F2 U' F2 R2 U F2 U2 R2 U' F2 U
+16: U2 R2 U2 F2 U' F2 U' F2 R2 U F2 U2 R2 U' F2 U2
+17: U2 R2 U2 F2 U' F2 U' F2 R2 U F2 U2 R2 U' F2 U'
+18: U2 R2 U' F' U2 F U F U2 F2 U' F R2 F U' F'
+19: U2 R2 F2 U' R2 U' R2 U F' U F' R2 F U' F' U
+20: U2 R2 F2 U' R2 U' R2 U F' U F' R2 F U' F' U2
+> lu scr
+scramble: L2 F2 D' B2 D B2 U' B2 U B2 F2 L2
+> lu face
+restrict: URF
+> lu sol
+1: R2 F2 R U2 R U2 R' F R U R' U' R' F R2
+2: R2 F2 R U2 R F U2 R U R' F' R' U' F2 R
+3: U R2 U2 R2 F2 U' R2 U R2 U F2 U2 R2 U' R2 U
+4: U2 R2 U2 F2 U' F2 U' F2 R2 U F2 U2 R2 U' F2 U2
+5: U2 R2 U' F' U2 F U F U2 F2 U' F R2 F U' F'
+6: U2 R2 F2 U' R2 U' R2 U F' U F' R2 F U' F' U'
+7: U' F2 R2 U' F2 R' U' R F2 R' U R U R2 F2 U
+8: R U R' F R2 F' R' U' R' F' U2 F R' U R U'
+9: F R U R' F R2 F' R' U' R' F' U2 R' U R U'
+10: F' U R' U R F2 R U F2 U F2 U' R2 U' R F'
+11: U R U F R' U R2 U' R' F' U' R' U2 F' U F U2
+12: U R2 U2 R2 U' R2 U R2 U F2 U2 R2 U' R2 U' F2 U2
+13: U F2 U2 F2 U F2 U F2 U2 R2 U2 R2 U' R2 U' R2 U
+14: U2 R U2 R2 U2 R2 U2 R F' U F' R2 F U' F' R2 F2
+15: U2 R2 F2 U2 R2 F2 R2 U2 F U F' R2 F U' F' R2 F2
+16: U2 R' U2 R2 U2 R2 U2 R' F' U F' R2 F U' F' R2 F2
+17: U2 F U R2 U' F' U2 F' U2 F U' R2 U2 F' U F U2
+18: U2 F U2 F R F R2 F2 U' F' U F' R2 F2 R' U2 F'
+19: U2 F' R' U R' F' R2 U' R2 F' R F U F U' R F
+20: U' R2 U' R2 U2 F2 U' F2 U' F2 U R2 U' R2 U F2 U'
+> exit
+$
