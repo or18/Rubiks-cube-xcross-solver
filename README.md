@@ -8,6 +8,7 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 #pragma GCC optimize("Ofast")
 #pragma GCC optimize("unroll-loops")
 ```
+- CLI is available. See cli.cpp and cli_output.txt.
 ## sample script
 ```c++
     solve_F2L( //sample program to output xxcross solutions
