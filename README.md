@@ -1,8 +1,8 @@
 # Rubiks-cube-xcross-solver
-C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, last layer substeps (OLL, ZBLL, etc.), last layer, 
+C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, last layer substeps (OLL, ZBLL, etc.), last layer. Demo solver: https://or18.github.io/Rubiks-cube-xcross-solver/
 
 # Note
-- Memory (for main.cpp, cli.cpp)
+- Memory required (for main.cpp, cli.cpp)
   
 | solver  | memory |
 | --- | --- |
@@ -22,6 +22,7 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 #pragma GCC optimize("unroll-loops")
 ```
 - CLI is available. See cli.cpp and cli_output.txt.
+- Lite version is available. See cli_lite.cpp and cli_lite_without_thread.cpp. For cross, xcross, xxcross and xxxcross, this cli is better.
 - Demo solver is available. See https://or18.github.io/Rubiks-cube-xcross-solver/
 
 # How to use
@@ -150,13 +151,13 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 
 # Performance
 ## Compiled and executed on Google colab by the command
-### Note
-- This performance measurement was done without using the pragma directive
 ```sh
 !apt-get install time
 !g++ -Ofast -mtune=native -march=native main.cpp -pthread
 !/usr/bin/time -v ./a.out
 ```
+### Note
+- This performance measurement was done without using the pragma directive
 ## cross
 ### script in main()
 ```c++
