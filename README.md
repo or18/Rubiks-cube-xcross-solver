@@ -3,6 +3,7 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 # How to use
 ## Note
 - Memory required
+  
 | solver  | memory |
 | --- | --- |
 | cross  | 4.2 MB  |
