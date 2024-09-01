@@ -2,6 +2,18 @@
 C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, last layer substeps (OLL, ZBLL, etc.), last layer, 
 # How to use
 ## Note
+- Memory required
+| solver  | memory |
+| --- | --- |
+| cross  | 4.2 MB  |
+| xcross  | 574 MB  |
+| xxcross  | 859 MB  |
+| xxxcross  | 1.15 GB  |
+| xxxxcross  | 1.43 GB  |
+| LL substeps  | 1.43 GB  |
+| LL  | 1.43 GB  |
+| LL AUF  | 1.43 GB  |
+
 - Add the following three lines to further speed up the process
 ```c++
 #pragma GCC target("avx2")
