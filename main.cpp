@@ -522,7 +522,19 @@ std::vector<int> create_prune_table2(int index1, int index2, int size1, int size
     int index2_tmp_end;
     int next_d;
     prune_table[start] = 0;
-    for (int d = 0; d < depth; ++d)
+    index1_tmp = index1 * 24;
+    index2_tmp = index2 * 18;
+    index1_tmp_end = index1_tmp + 18;
+    index2_tmp_end = index2_tmp + 18;
+    for (int j = index1_tmp, k = index2_tmp; j < index1_tmp_end && k < index2_tmp_end; ++j, ++k)
+    {
+        next_i = table1[j] + table2[k];
+        if (prune_table[next_i] == -1)
+        {
+            prune_table[next_i] = 1;
+        }
+    }
+    for (int d = 1; d < depth; ++d)
     {
         next_d = d + 1;
         for (int i = start; i < size; ++i)
@@ -796,7 +808,7 @@ struct xcross_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[slot1];
         index2 = corner_index[slot1];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
@@ -934,10 +946,10 @@ struct xxcross_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[slot1];
         index2 = corner_index[slot1];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index3 = edge_index[slot2];
         index4 = corner_index[slot2];
-        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
@@ -1096,13 +1108,13 @@ struct xxxcross_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[slot1];
         index2 = corner_index[slot1];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index3 = edge_index[slot2];
         index4 = corner_index[slot2];
-        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index5 = edge_index[slot3];
         index6 = corner_index[slot3];
-        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
@@ -1274,16 +1286,16 @@ struct xxxxcross_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[0];
         index2 = corner_index[0];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index3 = edge_index[1];
         index4 = corner_index[1];
-        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index5 = edge_index[2];
         index6 = corner_index[2];
-        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index7 = edge_index[3];
         index8 = corner_index[3];
-        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
@@ -1501,16 +1513,16 @@ struct LL_substeps_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[0];
         index2 = corner_index[0];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index3 = edge_index[1];
         index4 = corner_index[1];
-        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index5 = edge_index[2];
         index6 = corner_index[2];
-        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index7 = edge_index[3];
         index8 = corner_index[3];
-        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
@@ -1728,16 +1740,16 @@ struct LL_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[0];
         index2 = corner_index[0];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index3 = edge_index[1];
         index4 = corner_index[1];
-        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index5 = edge_index[2];
         index6 = corner_index[2];
-        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index7 = edge_index[3];
         index8 = corner_index[3];
-        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
@@ -1955,16 +1967,16 @@ struct LL_AUF_search
         std::vector<int> corner_index = {12, 15, 18, 21};
         index1 = edge_index[0];
         index2 = corner_index[0];
-        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread1(create_prune_table2_thread, std::ref(prune_table1), index1, index2, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index3 = edge_index[1];
         index4 = corner_index[1];
-        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread2(create_prune_table2_thread, std::ref(prune_table2), index3, index4, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index5 = edge_index[2];
         index6 = corner_index[2];
-        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread3(create_prune_table2_thread, std::ref(prune_table3), index5, index6, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         index7 = edge_index[3];
         index8 = corner_index[3];
-        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 11, std::ref(multi_move_table), std::ref(corner_move_table));
+        std::thread thread4(create_prune_table2_thread, std::ref(prune_table4), index7, index8, 24 * 22 * 20 * 18 * 16, 24, 10, std::ref(multi_move_table), std::ref(corner_move_table));
         count = 0;
         for (std::string name : restrict)
         {
