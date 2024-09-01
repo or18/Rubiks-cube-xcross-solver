@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rubiks Cube Cross solver</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			padding: 0;
+			background-color: #121212;
+		}
+
+		h1 {
+			font-family: Arial, sans-serif;
+			font-size: 24px;
+			text-align: center;
+			color: #ffffff;
+		}
+
+		h2 {
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			text-align: left;
+			color: #ffffff;
+		}
+
+		textarea {
+			font-family: Arial, sans-serif;
+			width: 100%;
+			max-width: 600px;
+			height: 150px;
+			font-size: 20px;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #41417f;
+			border-radius: 4px;
+			box-sizing: border-box;
+			background-color: #1e1e1e;
+			color: #ffffff;
+		}
+
+		select {
+			font-family: Arial, sans-serif;
+			width: 100%;
+			max-width: 200px;
+			font-size: 20px;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ffffff;
+			border-radius: 4px;
+			box-sizing: border-box;
+			background-color: #1e1e1e;
+			color: #ffffff;
+		}
+
+		button {
+			font-family: Arial, sans-serif;
+			width: 100%;
+			max-width: 200px;
+			font-size: 20px;
+			padding: 10px;
+			background-color: #56567c;
+			color: #ffffff;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #4a4a6d;
+		}
+
+		pre {
+			font-family: Arial, sans-serif;
+			background-color: #1e1e1e;
+			padding: 10px;
+			font-size: 20px;
+			border: 1px solid #41417f;
+			border-radius: 4px;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+			color: #ffffff;
+		}
+	</style>
+	<script src="f2l_solver_lite.js"></script>
+</head>
+
+<body>
+	<h1>Rubiks Cube Cross Solver</h1>
+	<h2>This is demo solver for cross, xcross, xxcross, xxxcross. This solver outputs only 10 solutions. If you want to output more solutions, set the faces and order to use, or try xxxxcross solver and some last layer solvers, please visit <a href="https://github.com/or18/Rubiks-cube-xcross-solver">Github repository</a>.</h2>
+
+	<textarea id="scr" rows="10" cols="10" placeholder="Input scramble here. Use U, U', U2, D, D2, D', L, L2, L', R, R2, R', F, F2, F', B, B2, B'. "></textarea><br>
+	<h2>Rotation Option</h2>
+	<select id="rot">
+		<option value="">None</option>
+		<option value="z2">z2</option>
+		<option value="z2 y">z2 y</option>
+		<option value="z2 y2">z2 y2</option>
+		<option value="z2 y'">z2 y'</option>
+		<option value="z'">z'</option>
+		<option value="z' y">z' y</option>
+		<option value="z' y2">z' y2</option>
+		<option value="z' y'">z' y'</option>
+		<option value="z">z</option>
+		<option value="z y">z y</option>
+		<option value="z y2">z y2</option>
+		<option value="z y'">z y'</option>
+		<option value="x'">x'</option>
+		<option value="x' y">x' y</option>
+		<option value="x' y2">x' y2</option>
+		<option value="x' y'">x' y'</option>
+		<option value="x2">x2</option>
+		<option value="x2 y">x2 y</option>
+		<option value="x2 y2">x2 y2</option>
+		<option value="x2 y'">x2 y'</option>
+		<option value="x">x</option>
+		<option value="x y">x y</option>
+		<option value="x y2">x y2</option>
+		<option value="x y'">x y'</option>
+	</select><br>
+	<h2>Slot Option</h2>
+	<select id="slot">
+		<option value="">None</option>
+		<option value="BL">BL</option>
+		<option value="BR">BR</option>
+		<option value="FR">FR</option>
+		<option value="FL">FL</option>
+		<option value="BL BR">BL BR</option>
+		<option value="BL FR">BL FR</option>
+		<option value="BL FL">BL FL</option>
+		<option value="BR FR">BR FR</option>
+		<option value="BR FL">BR FL</option>
+		<option value="FR FL">FR FL</option>
+		<option value="BL BR FR">BL BR FR</option>
+		<option value="BL BR FL">BL BR FL</option>
+		<option value="BL BR FL">BL FR FL</option>
+		<option value="BL BR FL">BR FR FL</option>
+	</select><br>
+	<button id="solveButton">Solve</button><br>
+	<pre id="result"></pre>
+
+	<script>
+		Module.onRuntimeInitialized = function () {
+			document.getElementById('solveButton').onclick = function () {
+				const scr = document.getElementById('scr').value;
+				const rot = document.getElementById('rot').value;
+				const slot = document.getElementById('slot').value;
+				const result = Module.solve(scr, rot, slot);
+				document.getElementById('result').innerText = result;
+			};
+		};
+	</script>
+</body>
+
+</html>
