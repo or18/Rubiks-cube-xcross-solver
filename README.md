@@ -2,7 +2,7 @@
 C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, last layer substeps (OLL, ZBLL, etc.), last layer, 
 
 # Note
-- Memory required
+- Memory (for main.cpp, cli.cpp)
   
 | solver  | memory |
 | --- | --- |
@@ -22,6 +22,7 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 #pragma GCC optimize("unroll-loops")
 ```
 - CLI is available. See cli.cpp and cli_output.txt.
+- Demo solver is available. See https://or18.github.io/Rubiks-cube-xcross-solver/
 
 # How to use
 ## sample script
