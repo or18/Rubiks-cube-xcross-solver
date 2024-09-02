@@ -810,7 +810,7 @@ struct xxcross_search
 					count += 1;
 					if (rotation == "")
 					{
-						result << ": " << AlgToString(sol) << "\n";
+						result << count << ": " << AlgToString(sol) << "\n";
 					}
 					else
 					{
