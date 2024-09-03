@@ -5,8 +5,13 @@
 #include <unordered_map>
 #include <string>
 #include <sstream>
-
-// emcc f2l_solver_lite.cpp -o f2l_solver_lite.js -O3 -s TOTAL_MEMORY=104857600 -s WASM=1 --bind
+/*
+cd emsdk
+./emsdk_env.bat
+Set-ExecutionPolicy RemoteSigned -Scope Process -force
+./emsdk activate latest
+emcc f2l_solver_lite.cpp -o f2l_solver_lite.js -O3 -s TOTAL_MEMORY=104857600 -s WASM=1 --bind
+*/
 
 struct State
 {
@@ -875,7 +880,7 @@ struct xxcross_search
 		prune2_tmp = prune_table2[index3 + index4];
 		if (prune1_tmp == 0 && prune2_tmp == 0 && index5 == edge_solved1 && index6 == edge_solved2)
 		{
-			std::cout << "already solved\n";
+			result << "already solved\n";
 			return result.str();
 		}
 		index2 *= 18;
@@ -1064,7 +1069,7 @@ struct xxxcross_search
 		prune3_tmp = prune_table3[index5 + index6];
 		if (prune1_tmp == 0 && prune2_tmp == 0 && prune3_tmp == 0 && index7 == edge_solved1 && index8 == edge_solved2 && index9 == edge_solved3)
 		{
-			std::cout << "already solved\n";
+			result << "already solved\n";
 			return result.str();
 		}
 		index2 *= 18;
