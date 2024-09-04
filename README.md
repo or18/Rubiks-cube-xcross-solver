@@ -197,7 +197,7 @@ solution count: 50 <br>
 | EO CO CP | UDRF | 6608 | 45860 | 1400 |
 | EO CO CP | URF | 6486 | 3217 | 1400 |
 
-scramble2: U' L2 F' L' U F' R' U2 D2 F2 R D2 L' U2 F2 R' B2 (last layer & BL slot) <br> 
+scramble2: U' L2 F' L' U F' R' U2 D2 F2 R D2 L' U2 F2 R' B2 (last layer & FR slot) <br> 
 rotation: <br>
 solution count: 50 <br>
 
