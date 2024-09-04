@@ -1,0 +1,56 @@
+1: R U2 R2 F R F' U2 R' F R F'
+2: R' U2 F R U R' U' F2 U2 F R
+3: R' F R F' U2 R' F R F2 U2 F
+4: R' F2 R2 U2 R' F R U2 R2 F2 R
+5: R' F2 R2 U2 R' F' R U2 R2 F2 R
+6: R' F' U2 F2 U R U' R' F' U2 R
+7: F U2 R' F' U' F U R2 U2 R' F'
+8: F R U2 R2 U' F' U F R U2 F'
+9: F R2 F2 U2 F R F' U2 F2 R2 F'
+10: F R2 F2 U2 F R' F' U2 F2 R2 F'
+11: F R' F' R U2 F R' F' R2 U2 R'
+12: F' U2 F2 R' F' R U2 F R' F' R
+13: U R U2 R2 F R F' U2 R' F R F'
+14: U R' U2 F R U R' U' F2 U2 F R
+15: U R' F R F' U2 R' F R F2 U2 F
+16: U R' F2 R2 U2 R' F R U2 R2 F2 R
+17: U R' F2 R2 U2 R' F' R U2 R2 F2 R
+18: U R' F' U2 F2 U R U' R' F' U2 R
+19: U F U2 R' F' U' F U R2 U2 R' F'
+20: U F R U2 R2 U' F' U F R U2 F'
+21: U F R2 F2 U2 F R F' U2 F2 R2 F'
+22: U F R2 F2 U2 F R' F' U2 F2 R2 F'
+23: U F R' F' R U2 F R' F' R2 U2 R'
+24: U F' U2 F2 R' F' R U2 F R' F' R
+25: U2 R U2 R2 F R F' U2 R' F R F'
+26: U2 R' U2 F R U R' U' F2 U2 F R
+27: U2 R' F R F' U2 R' F R F2 U2 F
+28: U2 R' F2 R2 U2 R' F R U2 R2 F2 R
+29: U2 R' F2 R2 U2 R' F' R U2 R2 F2 R
+30: U2 R' F' U2 F2 U R U' R' F' U2 R
+31: U2 F U2 R' F' U' F U R2 U2 R' F'
+32: U2 F R U2 R2 U' F' U F R U2 F'
+33: U2 F R2 F2 U2 F R F' U2 F2 R2 F'
+34: U2 F R2 F2 U2 F R' F' U2 F2 R2 F'
+35: U2 F R' F' R U2 F R' F' R2 U2 R'
+36: U2 F' U2 F2 R' F' R U2 F R' F' R
+37: U' R U2 R2 F R F' U2 R' F R F'
+38: U' R' U2 F R U R' U' F2 U2 F R
+39: U' R' F R F' U2 R' F R F2 U2 F
+40: U' R' F2 R2 U2 R' F R U2 R2 F2 R
+41: U' R' F2 R2 U2 R' F' R U2 R2 F2 R
+42: U' R' F' U2 F2 U R U' R' F' U2 R
+43: U' F U2 R' F' U' F U R2 U2 R' F'
+44: U' F R U2 R2 U' F' U F R U2 F'
+45: U' F R2 F2 U2 F R F' U2 F2 R2 F'
+46: U' F R2 F2 U2 F R' F' U2 F2 R2 F'
+47: U' F R' F' R U2 F R' F' R2 U2 R'
+48: U' F' U2 F2 R' F' R U2 F R' F' R
+49: R U2 R2 F R F' U2 R' F R F' U
+50: R U2 R2 F R F' U2 R' F R F' U2
+setup: 6073.02 ms
+search: 31.1387 ms
+Working Set Size: 1400 MB
+Pagefile Usage: 1399 MB
+Peak Working Set Size: 1400 MB
+Peak Pagefile Usage: 1400 MB

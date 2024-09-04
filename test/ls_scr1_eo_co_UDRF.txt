@@ -1,0 +1,56 @@
+1: R' F2 R2 U2 R' F' R U2 R2 F2 R
+2: U' F R2 F2 U2 F R' F' U2 F2 R2 F'
+3: R' U2 R' F R F' U' F' U' F U' R
+4: R' F2 R2 U2 R' F' R U2 R2 F2 R U
+5: R' F2 R2 U2 R' F' R U2 R2 F2 R U2
+6: R' F2 R2 U2 R' F' R U2 R2 F2 R U'
+7: U2 F U R U' R' F' R' F' U' F U R
+8: U2 F U' R U' R' U' R' F R F' U2 F'
+9: U' F R2 F2 U2 F R' F' U2 F2 R2 F' U
+10: U' F R2 F2 U2 F R' F' U2 F2 R2 F' U2
+11: U' F R2 F2 U2 F R' F' U2 F2 R2 F' U'
+12: D R' F2 R2 U2 R' F' R U2 R2 F2 R D'
+13: D2 R' F2 R2 U2 R' F' R U2 R2 F2 R D2
+14: D' R' F2 R2 U2 R' F' R U2 R2 F2 R D
+15: R' U2 R' F R F' U' F' U' F U' R U
+16: R' U2 R' F R F' U' F' U' F U' R U2
+17: R' U2 R' F R F' U' F' U' F U' R U'
+18: R' U' F' U' F R U' R' F' U' F U' R
+19: U R' F' U' F U R U2 F U R U' R' F'
+20: U F R U' R2 F' U' F U R2 U2 R' U' F'
+21: U2 R' F' U' F2 R U' R' U2 R U R' F' R
+22: U2 F U R U' R' F' U' F R U R' U' F'
+23: U2 F U R U' R' F' R' F' U' F U R U
+24: U2 F U R U' R' F' R' F' U' F U R U2
+25: U2 F U R U' R' F' R' F' U' F U R U'
+26: U2 F U' R U' R' U' R' F R F' U2 F' U
+27: U2 F U' R U' R' U' R' F R F' U2 F' U2
+28: U2 F U' R U' R' U' R' F R F' U2 F' U'
+29: U2 F U' R U' R' F' U' F R U' R' U' F'
+30: U2 F R' F' U F U2 F' U' F R2 U' R' F'
+31: U' D F R2 F2 U2 F R' F' U2 F2 R2 F' D'
+32: U' D2 F R2 F2 U2 F R' F' U2 F2 R2 F' D2
+33: U' D' F R2 F2 U2 F R' F' U2 F2 R2 F' D
+34: U' R' U' F' U F R U2 F R U R' U' F'
+35: U' R' U' F' U F R U' R' F' U' F U R
+36: U' R' U' F' U2 F2 U R U' R' F2 U' F R
+37: D R' U2 R' F R F' U' F' U' F U' R D'
+38: D R' F2 R2 U2 R' F' R U2 R2 F2 R U D'
+39: D R' F2 R2 U2 R' F' R U2 R2 F2 R U2 D'
+40: D R' F2 R2 U2 R' F' R U2 R2 F2 R U' D'
+41: D2 R' U2 R' F R F' U' F' U' F U' R D2
+42: D2 R' F2 R2 U2 R' F' R U2 R2 F2 R U D2
+43: D2 R' F2 R2 U2 R' F' R U2 R2 F2 R U2 D2
+44: D2 R' F2 R2 U2 R' F' R U2 R2 F2 R U' D2
+45: D' R' U2 R' F R F' U' F' U' F U' R D
+46: D' R' F2 R2 U2 R' F' R U2 R2 F2 R U D
+47: D' R' F2 R2 U2 R' F' R U2 R2 F2 R U2 D
+48: D' R' F2 R2 U2 R' F' R U2 R2 F2 R U' D
+49: R' U' R U' R' F R U R' U' F2 U2 F R
+50: R' U' F2 U2 F' R F U2 F' R' F2 U F R
+setup: 6278.98 ms
+search: 6103.38 ms
+Working Set Size: 1400 MB
+Pagefile Usage: 1400 MB
+Peak Working Set Size: 1400 MB
+Peak Pagefile Usage: 1400 MB

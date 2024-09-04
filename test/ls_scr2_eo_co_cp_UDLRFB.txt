@@ -1,0 +1,56 @@
+1: U L R F U2 R2 U' R U R2 F' R' U2 L'
+2: U L F L D2 R B2 R2 B' R D2 L U2 L
+3: U L' B' L2 D2 R' F' R D2 L D2 R D2 L2
+4: U' R' F R2 F B2 D2 L F' D2 B2 R F' R'
+5: L2 R B2 L B2 U' R' U L2 F' L2 U' L F
+6: L' U2 R' U2 L2 F L2 U' L U' R2 U' R' F
+7: R U L' R D B' D' R2 U' L2 D F2 D' L'
+8: R B' R' D B2 U2 D' B2 R2 U' R' B U2 R'
+9: R' F' U' F2 R2 F2 R' U' R F B U2 B' R
+10: R' F' U' F2 R2 F' U2 B' U' R U R B R'
+11: F D2 B2 R2 B D B' D' R' B D2 F2 L F
+12: F2 L F L2 U' L B' U2 B U B' U F B
+13: F' U F R U L' B2 U' B' U B2 L U' R'
+14: B' R' B U' F R2 F2 U' F R' U' B U' B'
+15: U D2 B L B D' B R B2 R2 B' D' F2 U F'
+16: U L D F D2 R D L D' B R' D L U2 L
+17: U L D2 R2 F R' D2 L2 B D2 R U2 R' D2 L
+18: U L D' F L2 U2 L R' F R F L F' D L'
+19: U L R F U2 R2 U' R U R2 F' R' U2 L' U
+20: U L R F U2 R2 U' R U R2 F' R' U2 L' U2
+21: U L R F U2 R2 U' R U R2 F' R' U2 L' U'
+22: U L R F U2 R2 F R2 D R D' F2 R' U2 L'
+23: U L F L D2 R B2 R2 B' R D2 L U2 L U
+24: U L F L D2 R B2 R2 B' R D2 L U2 L U2
+25: U L F L D2 R B2 R2 B' R D2 L U2 L U'
+26: U L2 D F D F' R' F' D2 L B D2 R D2 L
+27: U L2 D F D F' R' F' D' L D2 B R D L
+28: U L' B' L R2 U2 R' B' R B L' B2 R B' L
+29: U L' B' L2 D2 R' F' L B2 L B2 L' R2 D2 L2
+30: U L' B' L2 D2 R' F' L' R2 F2 L F2 L D2 L2
+31: U L' B' L2 D2 R' F' R D2 L D2 R D2 L2 U
+32: U L' B' L2 D2 R' F' R D2 L D2 R D2 L2 U2
+33: U L' B' L2 D2 R' F' R D2 L D2 R D2 L2 U'
+34: U L' B' L2 D2 R' F' R D2 L' R2 U2 R U2 R2
+35: U L' B' L2 D2 R' F' R D2 R F2 R F2 L' R'
+36: U L' B' R2 U2 R' B' L' R2 B2 R D2 R' D2 L2
+37: U L' B' R2 U2 R' B' R U2 L U2 L' B2 L R
+38: U R2 U2 R U F' U2 B L' U2 L U F B' R2
+39: U F U2 L F L2 B2 R' B2 L U2 B' R2 F' B
+40: U F U2 L F L2 B2 R' B2 L' F' B D2 L2 B'
+41: U F2 L' U' R2 D B D' L U R2 D' F2 D F'
+42: U F' R' F' R2 U2 R' F U F2 B D' L' D B'
+43: U B U2 B L' B D' R D' R D2 B2 L U2 B'
+44: U B L B D' B R B2 R2 B' D' F2 U F' D2
+45: U B' L2 D2 R D L U B L2 D L' U' F' B
+46: U B' L2 D2 R D L2 U L2 B D L2 U' F' B
+47: U2 L U L2 B' R B L R2 U B' U2 R B R
+48: U2 L' U B2 U2 L' B' D L' D F' R' F' D2 L'
+49: U2 L' D2 R U B2 U B2 U2 B' U' R' D2 L F2
+50: U2 R F' U' F2 U' B U F' U B' U2 F R' F'
+setup: 6106.43 ms
+search: 336487 ms
+Working Set Size: 1400 MB
+Pagefile Usage: 1399 MB
+Peak Working Set Size: 1400 MB
+Peak Pagefile Usage: 1400 MB

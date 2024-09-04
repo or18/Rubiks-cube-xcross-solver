@@ -1,0 +1,106 @@
+1: z2 R' D' L' B L2 R
+2: z2 U L D R' B L' D'
+3: z2 U L D B L' R' D'
+4: z2 U L R' B L' D' L
+5: z2 U L B L' R' D' L
+6: z2 U2 L R B' U R2 F2
+7: z2 U2 L R B' U F2 R2
+8: z2 D2 L' R' B' D' L2 B2
+9: z2 D2 L' R' B' D' B2 L2
+10: z2 D2 R' B' D' L' B L2
+11: z2 D2 R' B' L' D' B L2
+12: z2 D' L' B L2 R U F2
+13: z2 L D R' B D F' D2
+14: z2 L D R' B L2 D' B
+15: z2 L D B L2 R' D' B
+16: z2 L D B R' D F' D2
+17: z2 L R B' U F2 R2 B'
+18: z2 L R' B L2 D' B L2
+19: z2 L B L2 R' D' B L2
+20: z2 L B' R U F2 R2 B'
+21: z2 L2 F2 L F' D B L2
+22: z2 L' R' D2 F' D B L2
+23: z2 L' B L2 D R' B D'
+24: z2 L' B L2 D B R' D'
+25: z2 R2 B2 L' F' D B L2
+26: z2 R' U L B L' D' L
+27: z2 R' U2 D' L B R B'
+28: z2 R' U2 D' B L R B'
+29: z2 R' U2 D' B R B' L
+30: z2 R' D L' D2 B L2 R
+31: z2 R' D F L F' D2 L
+32: z2 R' D' L D2 F' D2 R'
+33: z2 R' D' L' R B L2 R
+34: z2 R' D' L' R2 B L2 R
+35: z2 R' D' L' R' B L2 R
+36: z2 R' D' L' B L2 U R
+37: z2 R' D' L' B L2 U2 R
+38: z2 R' D' L' B L2 U' R
+39: z2 R' D' L' B L2 R U
+40: z2 R' D' L' B L2 R U2
+41: z2 R' D' L' B L2 R U'
+42: z2 R' D' L' B2 L2 B' R
+43: z2 R' D' B U2 L R B'
+44: z2 R' D' B U2 R B' L
+45: z2 R' D' B L' R B L2
+46: z2 R' B D' L' B L2 R
+47: z2 R' B2 D' L' B L2 R
+48: z2 R' B' D' L' B L2 R
+49: z2 F D' L' F' B L R
+50: z2 F D' L' B R F' L
+51: z2 B R' D' L' B L2 R
+52: z2 B2 R' D' L' B L2 R
+53: z2 B' R' D' L' B L2 R
+54: z2 U D2 R' B L' B2 D' L2
+55: z2 U D2 R' B' D2 R D L
+56: z2 U D2 B L' R' B' D' L2
+57: z2 U D2 B2 R' B' L' D' L2
+58: z2 U D' R' B L' D' L2 R
+59: z2 U D' B L R U F2 B2
+60: z2 U D' B L' R' D' L2 R2
+61: z2 U L U R B' U R2 F2
+62: z2 U L U R B' U F2 R2
+63: z2 U L D R B L' R2 D'
+64: z2 U L D R' B U L' D'
+65: z2 U L D R' B U2 L' D'
+66: z2 U L D R' B U' L' D'
+67: z2 U L D R' B L' U D'
+68: z2 U L D R' B L' U2 D'
+69: z2 U L D R' B L' U' D'
+70: z2 U L D B U L' R' D'
+71: z2 U L D B U2 L' R' D'
+72: z2 U L D B U' L' R' D'
+73: z2 U L D B L' U R' D'
+74: z2 U L D B L' U2 R' D'
+75: z2 U L D B L' U' R' D'
+76: z2 U L D B L' R' U D'
+77: z2 U L D B L' R' U2 D'
+78: z2 U L D B L' R' U' D'
+79: z2 U L D B R' U L' D'
+80: z2 U L D B R' U2 L' D'
+81: z2 U L D B R' U' L' D'
+82: z2 U L R D R2 B L' D'
+83: z2 U L R D B L' R2 D'
+84: z2 U L R B L' R2 D' L
+85: z2 U L R2 D R B L' D'
+86: z2 U L R' F B L' D' L
+87: z2 U L R' F2 B L' D' L
+88: z2 U L R' F' B L' D' L
+89: z2 U L R' B U L' D' L
+90: z2 U L R' B U2 L' D' L
+91: z2 U L R' B U' L' D' L
+92: z2 U L R' B L' U D' L
+93: z2 U L R' B L' U2 D' L
+94: z2 U L R' B L' U' D' L
+95: z2 U L R' B L' D' L U
+96: z2 U L R' B L' D' L U2
+97: z2 U L R' B L' D' L U'
+98: z2 U L B U L' R' D' L
+99: z2 U L B U2 L' R' D' L
+100: z2 U L B U' L' R' D' L
+setup: 11.0144 ms
+search: 25.1804 ms
+Working Set Size: 8 MB
+Pagefile Usage: 4 MB
+Peak Working Set Size: 8 MB
+Peak Pagefile Usage: 4 MB

@@ -1,0 +1,56 @@
+1: R U2 R' F U R' F2 R F' R' F R F U' F'
+2: R U' R' F2 U2 F' U2 F2 U2 F' R' F' R U' F
+3: R U' R' F' R' U' R F2 R' F' R2 U' R2 U2 R
+4: F2 R' F2 R F U' R U' R2 F2 R F2 R' F R
+5: U2 R F' U' F' R2 F' R' U2 R2 U R U F R' F2
+6: U2 R2 F' R U F U F2 U2 F' R' F2 R' U' R' F
+7: U2 F U F R' F' R U' R2 F2 R' U' R F2 R2 F'
+8: U' F R F' R2 F R2 F2 U' F U' R F R2 F' R2
+9: R U R' U2 R' F R F' U F2 D' F U2 F' D F2
+10: R U R' F' U' R U2 F R' U2 R F' R2 F2 R F'
+11: R U2 R' U' R U2 R' U' F R U R' U' F2 U2 F
+12: R U2 R' F U R' F2 R F' R' F R F U' F' U
+13: R U2 R' F U R' F2 R F' R' F R F U' F' U2
+14: R U2 R' F U R' F2 R F' R' F R F U' F' U'
+15: R U2 F R' D R2 D' R' F' U F R' F' R2 U2 R2
+16: R U2 F2 R2 F' R2 F' U F2 R' F' R U' F' U' R'
+17: R U' R' F2 U2 F' U2 F2 U2 F' R' F' R U' F U
+18: R U' R' F2 U2 F' U2 F2 U2 F' R' F' R U' F U2
+19: R U' R' F2 U2 F' U2 F2 U2 F' R' F' R U' F U'
+20: R U' R' F' R' U' R F2 R' F' R2 U' R2 U2 R U
+21: R U' R' F' R' U' R F2 R' F' R2 U' R2 U2 R U2
+22: R U' R' F' R' U' R F2 R' F' R2 U' R2 U2 R U'
+23: R D' F D R F' U2 F D' R' F' R2 U R' D R'
+24: R2 U R2 U R2 U2 R F R F U2 R' F' R U2 F2
+25: R' U F R' F2 U F U2 F R F2 U' F R U' R
+26: R' F U R' U' R' F' U2 R' U2 R2 F' U F2 R2 F'
+27: R' F' U F R' F R' F' R2 F' U2 F2 R2 F' U R
+28: R' F' U F2 R2 F2 U2 F2 D R D' R F2 U F R
+29: F U2 R2 U2 R F' R' U2 R F' R2 U' R2 F2 R F'
+30: F U2 R' D F R' D' R2 F2 U' F2 D F' U' D' F'
+31: F U2 R' F2 R' D2 R' U' R D2 R F' R F' U' F'
+32: F R U R' U' F U' R' F2 R F U' R' F2 R F'
+33: F2 U F2 R' F R2 U' R' F' U2 R U R2 F R F2
+34: F2 U2 F2 R' F' R U R' F' D' F2 D F' R U2 F
+35: F2 U2 F' R U2 R2 D' F' D R U2 F' U R U R'
+36: F2 D F' U' F R2 D' R F R2 F' U2 R2 F2 R F'
+37: F2 R' F2 R F U' R U' R2 F2 R F2 R' F R U
+38: F2 R' F2 R F U' R U' R2 F2 R F2 R' F R U2
+39: F2 R' F2 R F U' R U' R2 F2 R F2 R' F R U'
+40: F' U F U R' U2 F D R' D' F2 U2 F R' U2 R2
+41: F' U F2 R2 D2 F U2 F' D2 F2 R' F' U2 F' R2 F'
+42: F' U2 F' U2 F' D R2 D' R F2 R2 F' U2 F' R' F'
+43: F' U' R' U' F R' F' R2 U R' F2 R' F2 R2 U2 F
+44: F' U' R' F R U2 R U R2 F R F U F U2 F
+45: F' R' U F2 R2 U2 F R' F' U2 R2 F2 U' R U F
+46: F' R' U' F2 R2 U2 F' R' F U2 R2 F2 U R U F
+47: U R U F U' R2 F2 U2 F' U2 F2 R2 U2 F' R' U' F'
+48: U R2 U' F U2 R' U F2 U2 R2 D F' U2 F R2 D' F
+49: U R2 U' F U2 R' D' F2 D2 R2 U' F' U2 F R2 D' F
+50: U R' U' F R' F2 U R' F U' F' R U' F R U R
+setup: 6064.26 ms
+search: 192209 ms
+Working Set Size: 1400 MB
+Pagefile Usage: 1399 MB
+Peak Working Set Size: 1400 MB
+Peak Pagefile Usage: 1400 MB
