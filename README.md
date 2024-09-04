@@ -209,7 +209,7 @@ solution count: 50 <br>
 | EO CO | UDLRFB | 6428 | 25144 | 1400 |
 | EO CO | UDRF | 6160 | 16189 | 1400 |
 | EO CO | URF | 6141 | 1238 | 1400 |
-| EO CO CP | UDLRFB | 6106 | 336487 | 14000 |
+| EO CO CP | UDLRFB | 6106 | 336487 | 1400 |
 | EO CO CP | UDRF | 6064 | 192209 | 1400 |
 | EO CO CP | URF | 6672 | 13133 | 1400 |
 
