@@ -2,7 +2,7 @@
 C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, last layer substeps (OLL, ZBLL, etc.), last layer. Demo solver: https://or18.github.io/Rubiks-cube-xcross-solver/
 
 # Note
-- Memory required (for main.cpp, cli.cpp)
+- Memory required (for main.cpp, cli.cpp). For more detail performance, please see Performance.
   
 | solver  | memory |
 | --- | --- |
@@ -150,216 +150,96 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 ```
 
 # Performance
-## Compiled and executed on Google colab by the command
-```sh
-!apt-get install time
-!g++ -Ofast -mtune=native -march=native main.cpp -pthread
-!/usr/bin/time -v ./a.out
-```
-### Note
-- This performance measurement was done without using the pragma directive
-## cross
-### script in main()
-```c++
-    solve_F2L( //sample program to output xxcross solutions
-        "R' F D L2 U' R2 U' F2 U' F2 R2 B2 D2 F L' R' D2 F' D L R", //scramble
-        "z2", //pre rotation
-        false, //solve BL slot or not
-        false, //solve BR slot or not
-        false, //solve FR slot or not
-        false, //solve FL slot or not
-        7, //max solution length
-        100, //max solution number
-        "UDLRFB" //face restrict (use U, D, L, R, F, B)
-        );
-```
-### result
-```txt
-	Command being timed: "./a.out"
-	User time (seconds): 0.02
-	System time (seconds): 0.00
-	Percent of CPU this job got: 96%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.03
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 4204
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 431
-	Voluntary context switches: 1
-	Involuntary context switches: 74
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0
-```
-## xcross
-### script in main()
-```c++
-    solve_F2L( //sample program to output xxcross solutions
-        "R' F D L2 U' R2 U' F2 U' F2 R2 B2 D2 F L' R' D2 F' D L R", //scramble
-        "z2", //pre rotation
-        true, //solve BL slot or not
-        false, //solve BR slot or not
-        false, //solve FR slot or not
-        false, //solve FL slot or not
-        10, //max solution length
-        100, //max solution number
-        "UDLRFB" //face restrict (use U, D, L, R, F, B)
-        );
-```
-### result
-```txt
-	Command being timed: "./a.out"
-	User time (seconds): 9.01
-	System time (seconds): 0.83
-	Percent of CPU this job got: 98%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.96
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 573648
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 142713
-	Voluntary context switches: 2
-	Involuntary context switches: 581
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0
-```
-## xxcross
-### script in main()
-```c++
-    solve_F2L( //sample program to output xxcross solutions
-        "R' F D L2 U' R2 U' F2 U' F2 R2 B2 D2 F L' R' D2 F' D L R", //scramble
-        "z2", //pre rotation
-        true, //solve BL slot or not
-        false, //solve BR slot or not
-        false, //solve FR slot or not
-        true, //solve FL slot or not
-        12, //max solution length
-        100, //max solution number
-        "UDLRFB" //face restrict (use U, D, L, R, F, B)
-        );
-```
-### result
-```txt
-	Command being timed: "./a.out"
-	User time (seconds): 22.07
-	System time (seconds): 0.99
-	Percent of CPU this job got: 165%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.93
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 858632
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 213999
-	Voluntary context switches: 20
-	Involuntary context switches: 3623
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0
-```
-## xxxcross
-### script in main()
-```c++
-    solve_F2L( //sample program to output xxcross solutions
-        "R' F D L2 U' R2 U' F2 U' F2 R2 B2 D2 F L' R' D2 F' D L R", //scramble
-        "z2", //pre rotation
-        true, //solve BL slot or not
-        true, //solve BR slot or not
-        false, //solve FR slot or not
-        true, //solve FL slot or not
-        14, //max solution length
-        100, //max solution number
-        "UDLRFB" //face restrict (use U, D, L, R, F, B)
-        );
-```
-### result
-```txt
-	Command being timed: "./a.out"
-	User time (seconds): 34.82
-	System time (seconds): 0.89
-	Percent of CPU this job got: 168%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:21.19
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1143780
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 285281
-	Voluntary context switches: 27
-	Involuntary context switches: 6848
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0
-```
-## xxxxcross
-### script in main()
-```c++
-    solve_F2L( //sample program to output xxcross solutions
-        "R' F D L2 U' R2 U' F2 U' F2 R2 B2 D2 F L' R' D2 F' D L R", //scramble
-        "z2", //pre rotation
-        true, //solve BL slot or not
-        true, //solve BR slot or not
-        true, //solve FR slot or not
-        true, //solve FL slot or not
-        16, //max solution length
-        100, //max solution number
-        "UDLRFB" //face restrict (use U, D, L, R, F, B)
-        );
-```
-### result
-```txt
-	Command being timed: "./a.out"
-	User time (seconds): 153.01
-	System time (seconds): 1.89
-	Percent of CPU this job got: 113%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:16.80
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1428868
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 356568
-	Voluntary context switches: 47
-	Involuntary context switches: 18877
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0
-```
+## Test Environment
+11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz <br>
+Cores: 4 <br>
+Processors: 8 <br>
+RAM: 16 GB <br>
+
+## F2L solver
+scramble: B U2 B' R F B' D R B' R2 B2 L D2 B2 R' U2 R' U2 F2 L2 <br>
+rotation: z2 <br>
+solution count: 100 <br>
+face restrict: UDLFRF <br>
+
+| slot option | setup (ms) | search (ms) | Memory (MB) | 
+| --- | --- | --- | --- |
+| None | 11  | 25  | 8  |
+| BL | 4784  | 31  | 564  |
+| BL FL | 5786 | 41 | 842 |
+| BL BR FL | 5611 | 920 | 1121 |
+| BL BR FR FL | 5801 | 35133 | 1399 |
+
+lite version
+
+| slot option | setup (ms) | search (ms) | Memory (MB) | 
+| --- | --- | --- | --- |
+| None | 15  | 31  | 8  |
+| BL | 379 | 31  | 42  |
+| BL FL | 312 | 94 | 59 |
+| BL BR FL | 392 | 5357 | 76 |
+| BL BR FR FL | 372 | 329173 | 94 |
+
+## LL substeps solver
+scramble1: L F R2 L' U2 F R F R2 F2 U2 R2 F' U2 F U2 F' (last layer) <br>
+rotation: <br>
+solution count: 50 <br>
+
+| LL option |  face restrict | setup (ms) | search (ms) | Memory (MB) |
+| --- | --- | --- | --- | --- |
+| EO | UDLRFB | 6622 | 2201 | 1400 |
+| EO | UDRF | 6634 | 374 | 1400 |
+| EO | URF | 6073 | 31 | 1400 |
+| EO CO | UDLRFB | 6441 | 6721 | 1400 |
+| EO CO | UDRF | 6278 | 6103 | 1400 |
+| EO CO | URF | 6116 | 579 | 1400 |
+| EO CO CP | UDLRFB | 6225 | 50698 | 1400 |
+| EO CO CP | UDRF | 6608 | 45860 | 1400 |
+| EO CO CP | URF | 6486 | 3287 | 1400 |
+
+scramble2: U' L2 F' L' U F' R' U2 D2 F2 R D2 L' U2 F2 R' B2 (last layer & BL slot) <br> 
+rotation: <br>
+solution count: 50 <br>
+
+| LL option |  face restrict | setup (ms) | search (ms) | Memory (MB) |
+| --- | --- | --- | --- | --- |
+| EO | UDLRFB | 6554 | 502 | 1400 |
+| EO | UDRF | 6317 | 391 | 1400|
+| EO | URF | 6061 | 31 | 1400 |
+| EO CO | UDLRFB | 6428 | 25144 | 1400 |
+| EO CO | UDRF | 6160 | 16189 | 1400 |
+| EO CO | URF | 6141 | 1238 | 1400 |
+| EO CO CP | UDLRFB | 6106 | 336487 | 14000 |
+| EO CO CP | UDRF | 6064 | 192209 | 1400 |
+| EO CO CP | URF | 6672 | 13133 | 1400 |
+
+## LL solver
+scramble1: L2 R2 U R2 U' B2 D B2 L2 U R2 U L R' F2 L' R' <br>
+rotation: <br>
+solution count: 20 <br>
+
+| face restrict | setup (ms) | search (ms) | Memory (MB) |
+| --- | --- | --- | --- |
+| UDLRFB | 6006 | 34934 | 1400 |
+| UDRF | 6400 | 39588 | 1400 |
+| URF| 6298 | 3256 | 1400 |
+
+scramble2: R D L2 D' R' D L2 U L2 F2 D R2 U F2 D2 L2 B2 <br>
+rotation: <br>
+solutions count: 20 <br>
+
+| face restrict | setup (ms) | search (ms) | Memory (MB) |
+| --- | --- | --- | --- |
+| UDLRFB | 6465 | 113948 | 1400 |
+| UDRF | 6693 | 57412 | 1400 |
+| URF| 6431 | 14209 | 1400 |
+
+scramble3: U2 F2 L2 D2 F2 U2 B2 R' F2 D2 L' B D L' D L' F2 R' <br>
+rotation: <br>
+solutions count: 20 <br>
+
+| face restrict | setup (ms) | search (ms) | Memory (MB) |
+| --- | --- | --- | --- |
+| UDLRFB | 6431 | 200947 | 1400 |
+| UDRF | 6030 | 422548 | 1400 |
+| URF| 6343 | 18259 | 1400 |
