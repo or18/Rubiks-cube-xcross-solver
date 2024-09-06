@@ -24,7 +24,9 @@ C++ source to solve Rubik's cube cross, xcross, xxcross, xxxcross, xxxxcross, la
 - CLI is available. See cli.cpp and cli_output.txt.
 - Lite version is available. See cli_lite.cpp and cli_lite_without_thread.cpp. For cross, xcross, xxcross and xxxcross, this cli is better.
 - Demo solver is available. See https://or18.github.io/Rubiks-cube-xcross-solver/
-
+- cli.cpp and cli_lite.cpp testing on github codespace. <br>
+[cli.cpp](https://youtu.be/76oK2FGWia8?si=AcBwhUqRPq9PagZN) <br>
+[cli_lite.cpp](https://youtu.be/htnWnpDn01Y?si=O1tiVga04Jede1qP) <br>
 # How to use
 ## sample script
 ```c++
